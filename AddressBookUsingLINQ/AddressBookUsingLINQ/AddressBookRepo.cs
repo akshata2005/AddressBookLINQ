@@ -88,5 +88,18 @@ namespace AddressBookUsingLINQ
                 Console.WriteLine("No Contact Found");
             }
         }
+        /// <summary>
+        /// Delete contact from table
+        /// </summary>
+        /// <param name="name"></param>
+        public void DeleteContact(string name)
+        {
+            var deleteRow = dataTable.AsEnumerable().Where(a => a.Field<string>("FirstName").Equals(name)).FirstOrDefault();
+            if (deleteRow != null)
+            {
+                deleteRow.Delete();
+                Console.WriteLine("Contact deleted successfully");
+            }
+        }
     }
 }
