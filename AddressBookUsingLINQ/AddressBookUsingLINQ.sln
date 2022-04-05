@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBookUsingLINQ", "AddressBookUsingLINQ\AddressBookUsingLINQ.csproj", "{12E74F89-3521-4025-BC8B-202A6837F96B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12E74F89-3521-4025-BC8B-202A6837F96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E74F89-3521-4025-BC8B-202A6837F96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E74F89-3521-4025-BC8B-202A6837F96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E74F89-3521-4025-BC8B-202A6837F96B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C4F6C7E-9090-4C5C-879F-F00CFD59C88D}
+	EndGlobalSection
+EndGlobal
