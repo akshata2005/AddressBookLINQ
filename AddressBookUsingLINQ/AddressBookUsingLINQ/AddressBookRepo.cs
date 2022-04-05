@@ -49,5 +49,44 @@ namespace AddressBookUsingLINQ
                 Console.WriteLine();
             }
         }
+        /// <summary>
+        /// Insert Contacts in a the addressBook
+        /// </summary>
+        /// <param name="contact"></param>
+        public void InsertContacts(Contact contact)
+        {
+            dataTable.Rows.Add(contact.FirstName, contact.LastName, contact.Address, contact.City, contact.State, contact.ZipCode, contact.PhoneNumber, contact.Email);
+            Console.WriteLine("Contact inserted successfully");
+        }
+        /// <summary>
+        /// UC4 Edits the existing contact in datatable
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="address"></param>
+        /// <param name="city"></param>
+        /// <param name="state"></param>
+        /// <param name="zipcode"></param>
+        /// <param name="phoneNumber"></param>
+        /// <param name="email"></param>
+        public void EditContact(string firstName, string lastName, string address, string city, string state, string zipcode, string phoneNumber, string email)
+        {
+            var recordedData = dataTable.AsEnumerable().Where(x => x.Field<string>("FirstName") == firstName).FirstOrDefault();
+            if (recordedData != null)
+            {
+                recordedData.SetField("LastName", lastName);
+                recordedData.SetField("Address", address);
+                recordedData.SetField("City", city);
+                recordedData.SetField("State", state);
+                recordedData.SetField("ZipCode", zipcode);
+                recordedData.SetField("EmailID", email);
+                recordedData.SetField("State", state);
+                Console.WriteLine("Contact edited successfully");
+            }
+            else
+            {
+                Console.WriteLine("No Contact Found");
+            }
+        }
     }
 }
